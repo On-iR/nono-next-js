@@ -1,4 +1,4 @@
-    FROM node:20.2.0-alpine
+    FROM --platform=linux/x86_64 node:20.2.0-alpine
     
     WORKDIR /usr/src/app
     
