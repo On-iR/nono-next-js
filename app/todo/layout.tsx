@@ -10,9 +10,5 @@ export default function TodoLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="jp">
-      <body>{children}</body>
-    </html>
-  );
+  return <main>{children}</main>;
 }

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
+import Link from "next/link";
+import { ApertureIcon } from "lucide-react";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,11 +25,24 @@ export default function RootLayout({
     <html lang="jp">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased container mx-auto",
+          "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
       >
-        {children}
+        <Menubar>
+          <MenubarMenu>
+            <MenubarTrigger>
+              <Link href="/">ホーム</Link>
+            </MenubarTrigger>
+            <MenubarTrigger>
+              <Link href="/todo">Todo</Link>
+            </MenubarTrigger>
+            <MenubarTrigger>
+              <Link href="/setting">設定</Link>
+            </MenubarTrigger>
+          </MenubarMenu>
+        </Menubar>
+        <div className="container mx-auto py-4">{children}</div>
       </body>
     </html>
   );

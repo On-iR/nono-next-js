@@ -1,5 +1,9 @@
 import Image from "next/image";
 
 export default function Todo() {
-  return <div>これはTODO画面です</div>;
+  return (
+    <main>
+      <h1 className="font-bold">TODO画面</h1>
+    </main>
+  );
 }
