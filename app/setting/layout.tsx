@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ホーム画面",
-  description: "これはホーム画面です。",
+  title: "設定画面",
+  description: "これは設定画面です。",
 };
 
-export default function RootLayout({
+export default function SettingLayout({
   children,
 }: {
   children: React.ReactNode;
